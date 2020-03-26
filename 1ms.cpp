@@ -20,10 +20,23 @@ void setSchedulingPolicy (int policy, int priority)
 void workload_1ms (void)
 {
         int repeat = 100000; // tune this for the right amount of workload
+        double testnum=0;
         for (int i = 0; i <= repeat; i++)
         {
-                // add some computation here (e.g., use sqrt() in cmath)
+                if(i%2==0)
+                  testnum+=10;
+                else
+                  testnum/=2;// add some computation here (e.g., use sqrt() in cmath)
         }
+        printf("%g\n",testnum);
+        int count=1;
+        for(;count<100000000;count++)
+        {
+          if(count%2==0 && count%3==0 && count%5==0 && count%7==0 && count%9==0 && count%11==0)
+          break;
+          //printf("in");
+        }
+      printf("%d \n",count );
 }
 
 int main (void)
